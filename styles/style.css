@@ -117,13 +117,13 @@
   opacity: 50%;
   color: var(--color_dark, #000);
   font-family: var(--PressStart, sans-serif);
-  font-weight: normal;
+  font-variation-settings: 'wgth' var(--inter_regular);
   font-size: var(--big_font, 14px);
   text-transform: uppercase;
   text-shadow: 0px 0px 5px var(--color_dark, #000);
   mix-blend-mode: hard-light;
   -webkit-text-stroke: 1px var(--color_light, #fff);
-  text-shadow: 0px 0px 5px var(--color_dark, #000);
+
 }
 
 @supports((text-stroke: 1px var(--color_light, #fff)) or (-webkit-text-stroke: 1px var(--color_light, #fff))) {
@@ -140,7 +140,7 @@
   font-size: var(--card_text_size, 18px);
   line-height: 21px;
   text-align: left;
-  font-variation-settings: "wght" 700;
+  font-variation-settings: 'wgth' var(--inter_bold);
 }
 
 .card_description {
@@ -150,7 +150,7 @@
   font-family: var(--inter, sans-serif);
   font-size: var(--card_text_size, 18px);
   line-height: 21px;
-  font-variation-settings: "wght" 400;
+  font-variation-settings: 'wgth' var(--inter_regular);
 }
 
 .button_container {

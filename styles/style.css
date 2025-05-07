@@ -194,13 +194,25 @@
   font-size: var(--big_font, 14px);
   line-height: 90%;
   mix-blend-mode: difference;
+    
 }
 
-.open_button {
-  width: 335px;
-  margin-inline: auto;
-  margin-block-end: 100px;
-  padding-block: 15px;
+.open_button { 
+  display: flex;
+  width: 335px; 
+  margin-inline: auto; 
+  margin-block-end: 100px; 
+  padding-block-start: 15px; 
+  padding-block-end: 15px;
+  justify-content: center;
+  align-items: center; 
+  gap: 8px;
+
+
+} 
+
+.open_button .floppy {
+  height: 100%;
 }
 
 .floppy {
@@ -305,8 +317,9 @@
   .open_button {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 11px;
     width: 306px;
+    padding-block-end: 15px;
   }
 
   .open_button .floppy {
@@ -318,7 +331,7 @@
   .dialog[open] {
    justify-self: center;
    padding: 30px 33px;  
-    
+
   }
 
   .close_button {

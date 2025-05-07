@@ -55,7 +55,7 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: var(--inter_regular, sans-serif);
+  font-variation-settings: 'wght' var(--inter_regular);
 }
 
 .header {
@@ -70,14 +70,14 @@
 .header_title {
   margin-top: 128px;
   margin-bottom: 20px;
-  font-family: var(--PressStart, sans-serif);
+  font-family: var(--PressStart, fantasy);
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-transform: uppercase;
 }
 
 .header_sublitle {
   margin-bottom: 128px;
-  font-family: var(--PressStart, sans-serif);
+  font-family: var(--PressStart, fantasy);
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
 }
@@ -116,8 +116,7 @@
   right: 25px;
   opacity: 50%;
   color: var(--color_dark, #000);
-  font-family: var(--PressStart, sans-serif);
-  font-variation-settings: 'wgth' var(--inter_regular);
+  font-family: var(--PressStart, fantasy);
   font-size: var(--big_font, 14px);
   text-transform: uppercase;
   text-shadow: 0px 0px 5px var(--color_dark, #000);
@@ -135,12 +134,13 @@
 }
 .card_header {
   padding-inline-start: 10px;
+  padding-inline-end: 10px;
   padding-block: 5px 5px;
   font-family: var(--inter, sans-serif);
   font-size: var(--card_text_size, 18px);
   line-height: 21px;
   text-align: left;
-  font-variation-settings: 'wgth' var(--inter_bold);
+
 }
 
 .card_description {
@@ -150,7 +150,7 @@
   font-family: var(--inter, sans-serif);
   font-size: var(--card_text_size, 18px);
   line-height: 21px;
-  font-variation-settings: 'wgth' var(--inter_regular);
+ 
 }
 
 .button_container {
@@ -160,6 +160,7 @@
   height: fit-content;
   margin: 25px 25px 25px 0px;
   gap: 8px;
+   
 }
 
 .card__icon-button {
@@ -167,6 +168,7 @@
   border: 2px solid transparent;
   background-color: var(--bg_color, #fff);
   padding: 0;
+  
 }
 
 .card__icon-button:focus {
@@ -188,7 +190,7 @@
   position: relative;
   z-index: 1;
   color: var(--color_light, #fff);
-  font-family: var(--PressStart, sans-serif);
+  font-family: var(--PressStart, fantasy);
   font-size: var(--big_font, 14px);
   line-height: 90%;
   mix-blend-mode: difference;
@@ -211,8 +213,6 @@
 }
 
 .dialog[open] {
-  position: fixed;
-  inset: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -237,7 +237,7 @@
 .dialog_text {
   display: block;
   max-width: 200px;
-  font-family: var(--PressStart, sans-serif);
+  font-family: var(--PressStart, fantasy);
   font-size: var(--big_font, 14px);
   line-height: 150%;
   letter-spacing: 0;
@@ -281,7 +281,7 @@
 .filter_multiply {
   filter: contrast(160%) brightness(129%);
 }
-@media (width <= 375px) {
+@media (width <= 376px) {
   .header {
     width: 100%;
   }
@@ -298,6 +298,10 @@
     gap: 50px;
   }
 
+  .watermark {
+    right: 10px
+  }
+
   .open_button {
     display: flex;
     flex-direction: column;
@@ -309,5 +313,14 @@
     align-self: center;
     width: 28px;
     height: 28px;
+  }
+
+  .dialog[open] {
+   justify-self: center;
+   padding: 30px 33px;   
+  }
+
+  .close_button {
+    width: 257px;
   }
 }

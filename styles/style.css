@@ -317,7 +317,8 @@
 
   .dialog[open] {
    justify-self: center;
-   padding: 30px 33px;   
+   padding: 30px 33px;  
+    
   }
 
   .close_button {

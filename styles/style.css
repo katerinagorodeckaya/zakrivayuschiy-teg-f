@@ -55,7 +55,7 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: 'wght' var(--inter_regular);
+  font-variation-settings: 'wght' 400;
 }
 
 .header {
@@ -119,38 +119,37 @@
   font-family: var(--PressStart, fantasy);
   font-size: var(--big_font, 14px);
   text-transform: uppercase;
-  text-shadow: 0px 0px 5px var(--color_dark, #000);
+  text-shadow: 0px 0px 5px var(--color_light, #fff);
   mix-blend-mode: hard-light;
-  -webkit-text-stroke: 1px var(--color_light, #fff);
-
 }
 
-@supports((text-stroke: 1px var(--color_light, #fff)) or (-webkit-text-stroke: 1px var(--color_light, #fff))) {
+@supports (
+  (text-stroke: 1px var(--color_light, #fff)) or
+    (-webkit-text-stroke: 1px var(--color_light, #fff))
+) {
   .watermark {
-      -webkit-text-stroke: 1px var(--color_light, #fff);
-      text-stroke: 1px var(--color_light, #fff);
-      text-shadow: none;
+    -webkit-text-stroke: 1px var(--color_light, #fff);
+    text-stroke: 1px var(--color_light, #fff);
+    text-shadow: none;
   }
 }
 .card_header {
+  font-size: 18px;
   padding-inline-start: 10px;
-  padding-inline-end: 10px;
   padding-block: 5px 5px;
   font-family: var(--inter, sans-serif);
-  font-size: var(--card_text_size, 18px);
   line-height: 21px;
   text-align: left;
-
+  font-variation-settings: 'wght' 700;
 }
 
 .card_description {
   display: grid;
   gap: 27px;
-  padding: 25px 25px 0;
+  padding: 25px 25px 0; 
   font-family: var(--inter, sans-serif);
   font-size: var(--card_text_size, 18px);
   line-height: 21px;
- 
 }
 
 .button_container {
@@ -160,7 +159,6 @@
   height: fit-content;
   margin: 25px 25px 25px 0px;
   gap: 8px;
-   
 }
 
 .card__icon-button {
@@ -168,7 +166,6 @@
   border: 2px solid transparent;
   background-color: var(--bg_color, #fff);
   padding: 0;
-  
 }
 
 .card__icon-button:focus {
@@ -194,22 +191,19 @@
   font-size: var(--big_font, 14px);
   line-height: 90%;
   mix-blend-mode: difference;
-    
 }
 
-.open_button { 
+.open_button {
   display: flex;
-  width: 335px; 
-  margin-inline: auto; 
-  margin-block-end: 100px; 
-  padding-block-start: 15px; 
+  width: 335px;
+  margin-inline: auto;
+  margin-block-end: 100px;
+  padding-block-start: 15px;
   padding-block-end: 15px;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   gap: 8px;
-
-
-} 
+}
 
 .open_button .floppy {
   height: 100%;
@@ -230,7 +224,11 @@
   justify-content: center;
   gap: 30px;
   padding: 30px;
+  background-color: transparent;
+  border: 2px solid var(--color_dark, #000);
+
 }
+
 
 .dialog[open]::backdrop {
   background-color: rgb(0 0 0 / 0.75);
@@ -260,6 +258,7 @@
   justify-self: center;
   width: 293px;
   height: 38px;
+  text-transform: uppercase;
 }
 
 .filter_saturate {
@@ -310,8 +309,13 @@
     gap: 50px;
   }
 
+  .card_header {
+    display: block;
+    max-width: 316px;
+  }
+
   .watermark {
-    right: 10px
+    right: 10px;
   }
 
   .open_button {
@@ -329,9 +333,11 @@
   }
 
   .dialog[open] {
-   justify-self: center;
-   padding: 30px 33px;  
-
+    justify-self: center;
+    padding: 30px 35px;
+    width: 341px;
+    background-color: transparent;
+ 
   }
 
   .close_button {

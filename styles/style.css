@@ -224,7 +224,6 @@
   justify-content: center;
   gap: 30px;
   padding: 30px;
-  background-color: transparent;
   border: 2px solid var(--color_dark, #000);
 
 }
@@ -336,8 +335,7 @@
     justify-self: center;
     padding: 30px 35px;
     width: 341px;
-    background-color: transparent;
- 
+  
   }
 
   .close_button {
